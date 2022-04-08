@@ -1,28 +1,28 @@
 module.exports = {
-  publicPath:'/',
-  configureWebpack: {
+    publicPath: '/',
+    configureWebpack: {
       resolve: {
-          alias: {
-              'assets': '@/assets',
-              'common': '@/common',
-              'components': '@/components',
-              'network': '@/network',
-              'views': '@/views',
-              'plugins': '@/plugins',
-          }
-      }
-  },
-  devServer: {
+        alias: {
+          assets: '@/assets',
+          common: '@/common',
+          components: '@/components',
+          network: '@/network',
+          views: '@/views',
+          plugins: '@/plugins',
+        },
+      },
+    },
+    devServer: {
       proxy: {
-          '/api': {
-              // target: 'https://www.codeman.store',
-              target: 'http://www.codeman.ink:3000',
-              changeOrigin: true,
-              ws: true,
-              pathRewrite: {
-                  '^/api': ''
-              }
-          }
+        '/api': {
+          // target: 'https://www.codeman.store',
+          target: 'http://www.codeman.ink:3000',
+          changeOrigin: true,
+          ws: true,
+          pathRewrite: {
+            '^/api': '',
+          },
+        },
         //   'm7': {
         //       target: 'http://m7.music.126.net',
         //       changeOrigin: true,
@@ -55,6 +55,7 @@ module.exports = {
         //           '^/m801': ''
         //       }
         //   }
-      }
-  },
-}
+      },
+    },
+  }
+  
